@@ -27,10 +27,10 @@ async def on_member_join(member):
         
 @bot.command(pass_context = True)
 async def toggle(ctx):
-    if status == true:
+    if status == True:
         status = false
         await bot.say('Whitelist Toggled Off')
-    elif status == false:
+    if status == false:
         status = true
         await bot.say('Whitelist Toggled On')
         
