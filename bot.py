@@ -22,7 +22,7 @@ async def on_member_join(member):
     if status:
         if str(member) not in whitelistedUsers:
             await bot.kick(str(member))
-    elif !status:
+    elif status == False:
         print('{} joined!'.format(member))
         
 @bot.command(pass_context = True)
@@ -30,7 +30,7 @@ async def toggle(ctx):
     if status:
         status = False
         await bot.say('Whitelist Toggled Off')
-    if !status:
+    if status == False:
         status = True
         await bot.say('Whitelist Toggled On')
         
